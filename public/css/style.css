@@ -1,0 +1,12 @@
+body {
+  /*text's font*/
+  font-family: "Roboto", sans-serif;
+}
+
+.icon h1 h2 h3 h4 h5 h6 {
+  /*icons and litles' font"*/
+  font-family: "Shrikhand", cursive;
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */
