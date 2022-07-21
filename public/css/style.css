@@ -8,7 +8,7 @@ body {
   z-index: 0;
 }
 
-.icon h1 h2 h3 h4 h5 h6 {
+.icon, h2 {
   /*icons and litles' font"*/
   font-family: "Shrikhand", cursive;
   font-size: 40px;
@@ -26,30 +26,13 @@ body {
   justify-content: center;
   opacity: 0;
   animation: loading 3000ms ease-out;
-  background-color: #c9abee;
-}
-.loading__tablecloth {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 1250px solid transparent;
-  border-bottom: 1250px solid #fface8;
-  transform: translateY(-1250px);
-}
-.loading__tablecloth:after {
-  width: 0;
-  height: 0;
-  content: "";
-  position: absolute;
-  left: -1250px;
-  top: 1250px;
-  border: 1250px solid transparent;
-  border-top: 1250px solid #fface8;
+  background: radial-gradient(#9356DC 10%, #FF79DA 80%, white 110%);
 }
 .loading__tableset {
+  display: none;
   position: absolute;
-  height: 750px;
-  width: 1125px;
+  height: 300px;
+  width: 450px;
   background-color: #99E2D0;
 }
 .loading__cutlery {
@@ -58,15 +41,15 @@ body {
   animation: cutlery 1750ms ease 3;
 }
 .loading__fork {
-  transform: translateX(-300px);
-  height: 400px;
+  transform: translateX(-120px);
+  height: 160px;
 }
 .loading__fork img {
   height: 100%;
 }
 .loading__knif {
-  transform: translateX(300px);
-  height: 400px;
+  transform: translateX(120px);
+  height: 160px;
 }
 .loading__knif img {
   height: 100%;
@@ -75,7 +58,7 @@ body {
   position: absolute;
   width: 0px;
   height: 0px;
-  border: 250px white solid;
+  border: 100px white solid;
   border-radius: 50%;
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
 }
@@ -83,14 +66,14 @@ body {
   position: absolute;
   width: 0px;
   height: 0px;
-  border: 175px white solid;
+  border: 70px white solid;
   border-radius: 50%;
   box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.15);
 }
 .loading__text {
   position: absolute;
-  font-size: 61.25px;
-  width: 271.25px;
+  font-size: 24.5px;
+  width: 108.5px;
   color: #9356DC;
 }
 .loading__text span::before {
