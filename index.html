@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
         <link rel="stylesheet" href="public/css/style.css">
         <title>OhMyFood!</title>
     </head>
@@ -28,7 +29,7 @@
 
 <!--header-->
         <header>
-            <a href="./main.html"><img src=".\images\ohmyfood@2x.svg" alt="Logo-Ohmyfood" class="icon"/></a>
+            <a href="./index.html"><img src=".\images\ohmyfood@2x.svg" alt="Logo-Ohmyfood" class="icon"/></a>
         </header>
 
         <main>         
@@ -42,11 +43,12 @@
             <section id="explorer">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="btn__explore">Explorer nos restaurants</button>
+                <button class="btn__explore btn__primarycolor">Explorer nos restaurants</button>
             </section>
 
 <!--Section 2: steps-->
             <section id="steps">
+                <h2 class="index-page__title">Fonctionnement</h2>
                 <ul>
                     <li>
                         <p class="step">1</p>
@@ -75,7 +77,7 @@
 <!--Section 3: restaurants-->
             <section id="restaurants">
                 <h2 class="restaurants__title">Restaurants</h2>
-                <article class="restaurant"><a href="menu_lapalettedugout.html">
+                <a href="menu_lapalettedugout.html"><article class="restaurant">
                     <img src=".\images\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo de plat">
                     <div class="restaurant__description">
                         <div class="restaurant__title">
@@ -85,8 +87,8 @@
                         <i class="fa-regular fa-heart"></i>
                         <button class="btn__new">Nouveau</button>
                     </div>
-                </a></article>
-                <article class="restaurant"><a href="menu_lanoteenchantee.html">
+                </article></a>
+                <a href="menu_lanoteenchantee.html"><article class="restaurant">
                     <img src=".\images\stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo de plat">
                     <div class="restaurant__description">
                         <div class="restaurant__title">
@@ -96,8 +98,8 @@
                         <i class="fa-regular fa-heart"></i>
                         <button class="btn__new">Nouveau</button>
                     </div>
-                </a></article>
-                <article class="restaurant"><a href="menu_alafrancaise.html">
+                </article></a>
+                <a href="menu_alafrancaise.html"><article class="restaurant">
                     <img src=".\images\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo de plat">
                     <div class="restaurant__description">
                         <div class="restaurant__title">
@@ -107,8 +109,8 @@
                         <i class="fa-regular fa-heart"></i>
                         <button class="btn__new">Nouveau</button>
                     </div>
-                </a></article>
-                <article class="restaurant"><a href="menu_ledelicedessens.html">
+                </article></a>
+                <a href="menu_ledelicedessens.html"><article class="restaurant">
                     <img src=".\images\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo de plat">
                     <div class="restaurant__description">
                         <div class="restaurant__title">
@@ -118,7 +120,7 @@
                         <i class="fa-regular fa-heart"></i>
                         <button class="btn__new">Nouveau</button>
                     </div>
-                </a></article>
+                </article></a>
         </main>
 
 <!--Footer-->        
@@ -126,7 +128,7 @@
             <p class="icon">ohmyfood</p>
             <ul>
                 <li>
-                    <!--<i class="fa-solid fa-utensils"></i>-->
+                    <i class="fa-solid fa-utensils"></i>
                     <a href="#">Proposer un restaurant</a>
                 </li>
                 <li>
