@@ -1,41 +1,3 @@
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  /*text's font*/
-  font-family: "Roboto", sans-serif;
-  z-index: 0;
-  width: 100%;
-  margin: auto;
-}
-
-.icon {
-  /*icons and litles' font"*/
-  font-family: "Shrikhand", cursive;
-  font-size: 40px;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0px;
-  padding: 0px;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
 .loading {
   position: fixed;
   top: 0px;
@@ -143,6 +105,69 @@ header .fa-arrow-left {
   font-size: 19px;
 }
 
+footer {
+  padding: 30px 30px 10px 30px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #353535;
+}
+footer .icon {
+  margin: 0;
+  font-size: 18px;
+}
+footer ul {
+  padding: 0;
+}
+footer li {
+  padding-bottom: 10px;
+}
+footer li a {
+  color: white;
+}
+footer .fa-utensils {
+  font-size: 15px;
+  padding-right: 11px;
+}
+footer .fa-handshake-angle {
+  font-size: 13px;
+  padding-right: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*text's font*/
+  font-family: "Roboto", sans-serif;
+  z-index: 0;
+  width: 100%;
+  margin: auto;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p {
+  margin: 0;
+  padding: 0;
+}
+body li {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  /*icons and litles' font"*/
+  font-family: "Shrikhand", cursive;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -152,9 +177,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 50px;
   background-color: #EAEAEA;
   z-index: 1;
+}
+.location i {
+  padding: 0 15px;
 }
 
 label {
@@ -165,10 +194,10 @@ label {
 input {
   background-color: transparent;
   border: none;
+  width: 40%;
 }
 input::placeholder {
-  padding-left: 15px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #292929;
 }
@@ -182,62 +211,64 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px 10px 55px 10px;
   background-color: #F6F6F6;
 }
 #explorer h1 {
   text-align: center;
+  font-size: 25px;
   width: 70%;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 #explorer p {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
   width: 90%;
-  margin-top: 0px;
 }
 #explorer button {
   height: 50px;
-  margin-top: 10px;
-  margin-bottom: 55px;
   border: none;
   border-radius: 25px;
   font-size: 16px;
   font-weight: 500;
   color: white;
-  background: linear-gradient(180deg, #ff93e1 -15%, #a16be0 115%);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, #FF79DA -15%, #9356DC 115%);
+  margin-top: 30px;
   padding: 10px 20px 10px 20px;
 }
 
 #steps {
   display: flex;
   flex-direction: column;
-  padding: 50px 0px;
+  align-items: center;
+  padding: 50px 20px;
 }
 #steps h2 {
-  align-self: center;
-  width: 90%;
-  margin: 0px;
+  width: 100%;
 }
 #steps ul {
-  margin-bottom: 0px;
+  width: 100%;
+  margin-bottom: 0;
+  padding-inline-start: 0px;
 }
 #steps li {
   position: relative;
   display: flex;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-left: 14px;
   border-radius: 20px;
   background-color: #F6F6F6;
   transition: opacity 500ms;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.1);
   z-index: 1;
+}
+#steps li:hover i {
+  color: #9356DC;
 }
 #steps li:hover::after {
   opacity: 1;
-}
-#steps li:hover::after i {
-  color: #9356DC;
 }
 #steps li::after {
   content: "";
@@ -255,23 +286,24 @@ input::placeholder {
 
 .step {
   position: absolute;
-  left: -10px;
-  top: 15px;
+  left: -14px;
+  top: 27px;
   font-size: 14px;
-  padding: 5px 10px;
+  padding: 3px 8px;
   border-radius: 50%;
   color: white;
   background-color: #9356DC;
 }
-
-div {
+.step__description {
   display: flex;
 }
-div i {
-  margin: 30px 30px;
+.step__description i {
+  font-size: 20px;
+  margin: 30px 25px 30px 35px;
+  color: #7E7E7E;
 }
-div p {
-  margin: 30px 0px;
+.step__description p {
+  margin: 30px 0;
 }
 
 #restaurants {
@@ -279,73 +311,64 @@ div p {
   flex-direction: column;
   align-items: center;
   gap: 17px;
-  padding: 50px 0px;
+  padding: 50px 20px 65px 20px;
   background-color: #F6F6F6;
 }
-#restaurants .restaurants__title {
-  margin-top: 0px;
-  width: 90%;
+#restaurants p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 300;
 }
 #restaurants a {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 0px;
+  width: 100%;
+  margin: 0;
 }
-#restaurants .restaurant {
+
+.restaurants__title {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.restaurant {
   position: relative;
+  height: 100%;
   width: 100%;
   border-radius: 20px;
   background-color: white;
-  margin: 0px;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.1);
 }
-#restaurants .restaurant__title {
-  display: flex;
-  flex-direction: column;
-}
-#restaurants .restaurant img {
+.restaurant img {
+  height: 175px;
   width: 100%;
   object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
 }
-#restaurants .restaurant .restaurant__description {
+.restaurant__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 15px;
 }
-#restaurants .restaurant button {
+.restaurant__description i {
+  font-size: 25px;
+  font-weight: 100;
+}
+.restaurant__title {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant__title h3 {
+  padding-bottom: 5px;
+}
+.restaurant button {
   position: absolute;
   left: 75%;
   top: 15px;
   border: none;
   border-radius: 2px;
   padding: 5px;
-}
-
-footer {
-  padding: 30px;
-  color: white;
-  font-size: 20px;
-  background-color: #353535;
-}
-footer .icon {
-  margin: 0px;
-  font-size: 23px;
-}
-footer ul {
-  padding: 0px;
-}
-footer li {
-  padding-bottom: 10px;
-}
-footer li a {
-  color: white;
-}
-footer .fa-utensils {
-  font-size: 15px;
-}
-footer .fa-handshake-angle {
-  font-size: 13px;
 }
 
 /*# sourceMappingURL=style.css.map */
