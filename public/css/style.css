@@ -247,6 +247,7 @@ input::placeholder {
 }
 #steps h2 {
   width: 100%;
+  margin-bottom: 10px;
 }
 #steps ul {
   width: 100%;
@@ -256,7 +257,7 @@ input::placeholder {
 #steps li {
   position: relative;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   margin-left: 14px;
   border-radius: 20px;
   background-color: #F6F6F6;
@@ -289,7 +290,7 @@ input::placeholder {
   left: -14px;
   top: 27px;
   font-size: 14px;
-  padding: 3px 8px;
+  padding: 4px 8px 2px 8px;
   border-radius: 50%;
   color: white;
   background-color: #9356DC;
@@ -299,11 +300,11 @@ input::placeholder {
 }
 .step__description i {
   font-size: 20px;
-  margin: 30px 25px 30px 35px;
+  margin: 27px 25px 27px 35px;
   color: #7E7E7E;
 }
 .step__description p {
-  margin: 30px 0;
+  margin: 25px 0;
 }
 
 #restaurants {
@@ -351,9 +352,25 @@ input::placeholder {
   align-items: center;
   padding: 15px 15px;
 }
-.restaurant__description i {
+.restaurant .fa-regular {
   font-size: 25px;
-  font-weight: 100;
+  position: relative;
+  bottom: 8px;
+  right: 8px;
+}
+.restaurant .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(0deg, #FF79DA 1%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 350ms;
+}
+.restaurant .fa-solid:hover {
+  opacity: 1;
 }
 .restaurant__title {
   display: flex;
@@ -363,12 +380,17 @@ input::placeholder {
   padding-bottom: 5px;
 }
 .restaurant button {
-  position: absolute;
-  left: 75%;
-  top: 15px;
   border: none;
   border-radius: 2px;
-  padding: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  color: #278870;
+  background: #99E2D0;
+  position: absolute;
+  right: 12px;
+  top: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
