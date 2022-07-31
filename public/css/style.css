@@ -1,3 +1,69 @@
+@keyframes text {
+  25% {
+    content: "Loading.";
+  }
+  50% {
+    content: "Loading..";
+  }
+  75% {
+    content: "Loading...";
+  }
+}
+@keyframes cutlery {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 2;
+  }
+}
+@keyframes check {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes price {
+  from {
+    margin-right: 10px;
+  }
+  to {
+    margin-right: 70px;
+  }
+}
+@keyframes title {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 70px;
+  }
+}
+@keyframes dishes-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .loading {
   position: fixed;
   top: 0px;
@@ -58,35 +124,6 @@
   animation: text 1750ms 2;
 }
 
-@keyframes text {
-  25% {
-    content: "Loading.";
-  }
-  50% {
-    content: "Loading..";
-  }
-  75% {
-    content: "Loading...";
-  }
-}
-@keyframes cutlery {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@keyframes loading {
-  0% {
-    opacity: 1;
-    z-index: 2;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 2;
-  }
-}
 header {
   position: sticky;
   position: -webkit-sticky;
@@ -347,6 +384,18 @@ input::placeholder {
     width: 350px;
   }
 }
+#restaurants .btn__new {
+  border: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #278870;
+  background: #99E2D0;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
 
 .restaurants__title {
   margin-bottom: 5px;
@@ -360,6 +409,11 @@ input::placeholder {
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.restaurant figure {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .restaurant img {
   height: 175px;
@@ -399,19 +453,6 @@ input::placeholder {
 }
 .restaurant__title h3 {
   padding-bottom: 5px;
-}
-.restaurant button {
-  border: none;
-  border-radius: 2px;
-  padding: 5px 10px;
-  font-size: 14px;
-  font-weight: 500;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
-  color: #278870;
-  background: #99E2D0;
-  position: absolute;
-  right: 12px;
-  top: 12px;
 }
 
 .banner {
@@ -516,22 +557,18 @@ input::placeholder {
 }
 .menu__part li:nth-child(1) {
   animation: dishes-appear 500ms 0ms forwards ease-out;
-  transition: opacity 0 500ms;
   opacity: 0;
 }
 .menu__part li:nth-child(2) {
   animation: dishes-appear 500ms 200ms forwards ease-out;
-  transition: opacity 0 700ms;
   opacity: 0;
 }
 .menu__part li:nth-child(3) {
   animation: dishes-appear 500ms 400ms forwards ease-out;
-  transition: opacity 0 900ms;
   opacity: 0;
 }
 .menu__part li:nth-child(4) {
   animation: dishes-appear 500ms 600ms forwards ease-out;
-  transition: opacity 0 900ms;
   opacity: 0;
 }
 .menu__part li:hover .dish__price {
@@ -552,19 +589,6 @@ input::placeholder {
   }
 }
 
-@keyframes dishes-appear {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 .dish__text {
   display: flex;
   justify-content: space-between;
@@ -616,30 +640,6 @@ input::placeholder {
   transform-origin: right;
 }
 
-@keyframes check {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-@keyframes price {
-  from {
-    margin-right: 10px;
-  }
-  to {
-    margin-right: 70px;
-  }
-}
-@keyframes title {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 70px;
-  }
-}
 .btn__command {
   height: 50px;
   border: none;
