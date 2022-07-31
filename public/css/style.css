@@ -11,6 +11,7 @@
   opacity: 0;
   animation: loading 3000ms ease-out;
   background: radial-gradient(#9356DC 10%, #FF79DA 80%, white 110%);
+  display: none;
 }
 .loading__cutlery {
   position: absolute;
@@ -184,13 +185,13 @@ body a {
 
 label {
   position: absolute;
-  left: -500px;
+  left: -5000px;
 }
 
 input {
   background-color: transparent;
   border: none;
-  width: 40%;
+  width: 150px;
 }
 input::placeholder {
   font-size: 16px;
@@ -254,6 +255,12 @@ input::placeholder {
   margin-bottom: 0;
   padding-inline-start: 0px;
 }
+@media screen and (min-width: 768px) {
+  #steps ul {
+    display: flex;
+    gap: 20px;
+  }
+}
 #steps li {
   position: relative;
   display: flex;
@@ -264,6 +271,11 @@ input::placeholder {
   transition: opacity 500ms;
   box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.1);
   z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  #steps li {
+    flex: 1 1;
+  }
 }
 #steps li:hover i {
   color: #9356DC;
@@ -305,12 +317,13 @@ input::placeholder {
 }
 .step__description p {
   margin: 25px 0;
+  padding-right: 30px;
 }
 
 #restaurants {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 17px;
   padding: 50px 20px 65px 20px;
   background-color: #F6F6F6;
@@ -325,6 +338,11 @@ input::placeholder {
   flex-direction: column;
   width: 100%;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  #restaurants a {
+    width: 350px;
+  }
 }
 
 .restaurants__title {
