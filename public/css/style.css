@@ -11,7 +11,6 @@
   opacity: 0;
   animation: loading 3000ms ease-out;
   background: radial-gradient(#9356DC 10%, #FF79DA 80%, white 110%);
-  display: none;
 }
 .loading__cutlery {
   position: absolute;
@@ -338,6 +337,10 @@ input::placeholder {
   flex-direction: column;
   width: 100%;
   margin: 0;
+  transition: transform 200ms linear;
+}
+#restaurants a:hover {
+  transform: scale(1.02);
 }
 @media screen and (min-width: 768px) {
   #restaurants a {
