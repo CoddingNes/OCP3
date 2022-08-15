@@ -1,0 +1,20 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+//loading animation
+$plateextsize: 12vw;
+$tableclothsize: calc($plateextsize * 6);
+$tablesetsize: calc($plateextsize * 3);
+$plateintsize: calc($plateextsize * 0.7);
+$loadingfontsize: calc($plateintsize * 0.35);
+$cutlerysize: calc($plateextsize * 1.6);
+$cutleryposition: calc($plateextsize + $plateextsize * 0.2);
+$glassposition: calc($plateextsize + $plateextsize * 0.4);
+$loadingbackgroundcolor: radial-gradient($primary-color 10%,  $secondary-color 80%, white 110%);
+
+//elements main content
+$btn__primarycolor: linear-gradient(180deg, $secondary-color -15%, $primary-color 115%);
+$btn__nouveau-textcolor: darken($tertiary-color, 40);
+$heart__gradient: linear-gradient(0deg, $secondary-color 1%, $primary-color 100%);
+$section__bgcolor: #F6F6F6;

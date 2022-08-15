@@ -1,0 +1,30 @@
+//footer
+
+footer {
+    padding: 30px 30px 10px 30px;  
+    color: white;    
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #353535;
+    .icon {
+        margin: 0;
+        font-size: 18px;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        padding-bottom: 10px;
+        a {
+        color: white;
+        }
+    }
+    .fa-utensils {
+        font-size: 15px;
+        padding-right: 11px;
+    }
+    .fa-handshake-angle {
+        font-size: 13px;
+        padding-right: 8px;
+    }
+}

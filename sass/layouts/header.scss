@@ -1,0 +1,23 @@
+//header 
+
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    .icon {
+        width: 160px;
+        margin-top: 10px;
+    }
+    .fa-arrow-left {
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        font-size: 19px;
+    }
+}
+

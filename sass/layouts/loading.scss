@@ -1,0 +1,64 @@
+//Loading Spinner
+
+
+.loading {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: loading 3000ms ease-out; 
+    background: $loadingbackgroundcolor;
+    &__cutlery {
+        position: absolute;
+        display: flex;
+        animation: cutlery 1750ms ease 3;
+    }
+    &__fork {
+        transform: translateX(- $cutleryposition);
+        height: $cutlerysize;
+        & img {
+            height: 100%;
+        }
+    }
+    &__knif {
+        transform: translateX($cutleryposition);
+        height: $cutlerysize;
+            & img {
+                height: 100%;
+            }
+    }
+    &__ext {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border: $plateextsize white solid;
+        border-radius: 50%;
+        box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+    }
+    &__int {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border: $plateintsize white solid;
+        border-radius: 50%;
+        box-shadow:  0px 0px 18px 5px rgba(0,0,0,0.15);
+    }
+    &__text {
+        position: absolute;
+        font-size: $loadingfontsize;
+        width: $plateintsize * 1.55;
+        color: $primary-color;
+        span {
+            &::before{
+            content: "Loading";
+            animation: text 1750ms 2;
+            } 
+        }
+    }
+}
